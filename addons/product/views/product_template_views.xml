@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <data>
+
+
+    <record id="view_product_template_form_inherit" model="ir.ui.view">
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="slug"/>
+                <field name="additional_barcode"/>
+            </field>
+        </field>
+    </record>
+
+
+    <!-- Customer Action -->
+    <!--<record model="ir.actions.act_window" id="action_product">
+      <field name="name">Product</field>
+      <field name="model">product.product</field>
+      <field name="view_mode">tree,form</field>
+      <field name="arch" type="html">
+        <p class="o_view_nocontent_smiling_face">
+          Create Product Record
+        </p>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="product_view_form">
+      <field name="name">product.view.form</field>
+      <field name="model">product.product</field>
+      <field name="arch" type="xml">
+        <form string="Product">
+          <sheet>
+            <group>
+              <field name="slug"/>
+              <field name="additional_barcode"/>
+            </group>
+          </sheet>
+          <field name="slug"/>
+          <field name="additional_barcode"/>
+        </form>
+      </field>
+    </record>
+
+    <!-- Product Tree View -->
+    <record model="ir.ui.view" id="product_view_tree">
+      <field name="name">product.tree</field>
+      <field name="model">product.product</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="slug" string="Slug" />
+          <field name="additional_barcode" string="Additional Barcode"/>
+        </tree>
+      </field>
+    </record> -->
+
+  </data>
+</odoo>
